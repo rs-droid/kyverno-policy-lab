@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged-pod
+  labels:
+    app: kyverno-lab
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.27
+      securityContext:
+        privileged: true
